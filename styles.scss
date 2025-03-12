@@ -1,0 +1,16 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+body {
+  @include bodyStyle;
+  background-color: $fondo-principal;
+}
+
+#wrapper {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-areas: "menu"
+                       "principal"
+                       "footer";
+}
+
