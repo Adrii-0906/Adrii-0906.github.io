@@ -53,4 +53,93 @@ body {
   text-decoration: none;
 }
 
+#principal #sobreMi {
+  background-color: azure;
+  width: 80%;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  margin: 5% auto;
+  text-align: left;
+}
+#principal #sobreMi hr {
+  border: 1px lightskyblue solid;
+  width: 100%;
+}
+#principal #experienciaLaboral {
+  background-color: azure;
+  width: 80%;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  margin: 5% auto;
+  text-align: left;
+}
+#principal #experienciaLaboral hr {
+  border: 1px lightskyblue solid;
+  width: 100%;
+}
+#principal #formacion {
+  background-color: azure;
+  width: 80%;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  margin: 5% auto;
+  text-align: left;
+}
+#principal #formacion hr {
+  border: 1px lightskyblue solid;
+  width: 100%;
+}
+#principal #formacion ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#principal #conociminetos {
+  background-color: azure;
+  width: 80%;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  margin: 5% auto;
+  text-align: left;
+}
+#principal #conociminetos hr {
+  border: 1px lightskyblue solid;
+  width: 100%;
+}
+#principal #conociminetos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer {
+  background-color: #278075;
+}
+#footer p {
+  text-align: center;
+  font-weight: bold;
+}
+#footer #contactos-enlaces {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 /*# sourceMappingURL=styles.css.map */

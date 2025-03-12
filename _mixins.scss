@@ -20,3 +20,27 @@
   align-items: center;
   gap: 10px;
 }
+
+@mixin divs {
+  background-color: $azure;
+  width: 80%;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  margin: 5% auto;
+  text-align: left;
+}
+
+@mixin separador {
+  border: 1px $lightskyblue solid;
+  width: 100%;
+}
+
+@mixin listas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
