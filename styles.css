@@ -11,4 +11,46 @@ body {
   grid-template-areas: "menu" "principal" "footer";
 }
 
+#menu {
+  background-color: #278075;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+#menu img {
+  width: 35%;
+  height: 35%;
+  border-radius: 50%;
+  padding: 5%;
+}
+#menu #arriba {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+#menu #drch {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#menu #abajo {
+  border-top: 3px black solid;
+  border-bottom: 3px black solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  background-color: #10ff00;
+  padding: 3%;
+}
+#menu a {
+  outline: none;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=styles.css.map */

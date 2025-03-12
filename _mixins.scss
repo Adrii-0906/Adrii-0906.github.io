@@ -10,4 +10,13 @@
 @mixin menuSticky {
   position: sticky;
   top: 0;
+  z-index: 1000;
+}
+
+@mixin horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }

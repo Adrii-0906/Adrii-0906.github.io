@@ -14,3 +14,35 @@ body {
                        "footer";
 }
 
+
+#menu {
+  background-color: $fondo-menu;
+  @include menuSticky;
+  img {
+    width: 35%;
+    height: 35%;
+    border-radius: 50%;
+    padding: 5%;
+  }
+  #arriba {
+    @include horizontal;
+    color: $color-letra;
+  }
+  #drch {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  #abajo {
+    border-top: 3px black solid;
+    border-bottom: 3px black solid;
+    @include horizontal;
+    font-size: 15px;
+    background-color: $color-fondo-menu;
+    padding: 3%;
+  }
+  a {
+    outline: none;
+    text-decoration: none;
+  }
+}
