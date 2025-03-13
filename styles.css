@@ -152,45 +152,44 @@ body {
 #principal div {
   scroll-margin-top: 360px;
 }
-
-#footer {
-  background-color: #816430;
+#principal #footer {
+  background-color: bisque;
 }
-#footer p {
+#principal #footer p {
   text-align: center;
   font-weight: bold;
 }
-#footer #contactos-enlaces {
+#principal #footer #contactos-enlaces {
   display: flex;
   flex-direction: row;
 }
-#footer #contacto {
-  font-size: 20px;
+#principal #footer #contacto {
+  font-size: 15px;
 }
-#footer #contacto h3 {
+#principal #footer #contacto h3 {
   text-align: center;
 }
-#footer #contacto ul {
+#principal #footer #contacto ul {
   list-style: none;
   padding: 0;
   margin-left: 40px;
 }
-#footer #enlace {
+#principal #footer #enlace {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#footer #enlace h3 {
+#principal #footer #enlace h3 {
   text-align: center;
 }
-#footer #enlace ul {
+#principal #footer #enlace ul {
   list-style: none;
   padding: 0;
   margin-left: 40px;
   text-align: center;
 }
-#footer #enlace ul img {
+#principal #footer #enlace ul img {
   width: 40%;
   height: 40%;
 }
@@ -209,6 +208,12 @@ body {
     flex-direction: column;
     height: 100vh;
   }
+  #menu img {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    padding: 5%;
+  }
   #menu #arriba {
     display: flex;
     flex-direction: column;
@@ -224,7 +229,21 @@ body {
   }
   #menu a {
     color: white;
-    margin-bottom: 15%;
+    margin-bottom: 5%;
+  }
+  #principal #footer #contacto {
+    font-size: 20px;
+    margin-left: 20%;
+  }
+  #principal #footer #enlace ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 40px;
+    text-align: center;
+  }
+  #principal #footer #enlace ul img {
+    width: 20%;
+    height: 20%;
   }
 }
 
