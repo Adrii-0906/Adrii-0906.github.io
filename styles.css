@@ -18,8 +18,8 @@ body {
   z-index: 1000;
 }
 #menu img {
-  width: 35%;
-  height: 35%;
+  width: 40%;
+  height: 40%;
   border-radius: 50%;
   padding: 5%;
 }
@@ -28,7 +28,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   color: white;
 }
 #menu #drch {
@@ -43,14 +43,18 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   font-size: 15px;
-  background-color: #10ff00;
+  background-color: bisque;
   padding: 3%;
 }
 #menu a {
+  color: black;
   outline: none;
   text-decoration: none;
+}
+#menu a:hover {
+  color: blue;
 }
 
 #principal #sobreMi {
@@ -101,10 +105,13 @@ body {
   border: 1px lightskyblue solid;
   width: 100%;
 }
+#principal #formacion h3 {
+  text-align: center;
+}
 #principal #formacion ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-left: 40px;
 }
 #principal #conociminetos {
   background-color: azure;
@@ -122,10 +129,32 @@ body {
   border: 1px lightskyblue solid;
   width: 100%;
 }
+#principal #conociminetos #listaHorizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  align-items: normal;
+}
+#principal #conociminetos #listaHorizontal h4 {
+  text-align: center;
+}
 #principal #conociminetos ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-left: 40px;
+}
+#principal #conociminetos ul li a {
+  color: black;
+  outline: none;
+  text-decoration: none;
+}
+#principal #conociminetos ul li a:hover {
+  color: blue;
+}
+#principal div {
+  scroll-margin-top: 360px;
 }
 
 #footer {
@@ -138,8 +167,60 @@ body {
 #footer #contactos-enlaces {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+}
+#footer #contacto h3 {
+  text-align: center;
+}
+#footer #contacto ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 40px;
+}
+#footer #enlace {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+#footer #enlace h3 {
+  text-align: center;
+}
+#footer #enlace ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 40px;
+  text-align: center;
+}
+#footer #enlace ul img {
+  width: 40%;
+  height: 30%;
+}
+
+@media (min-width: 850px) {
+  #wrapper {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas: "menu contenido";
+  }
+  #menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+  }
+  #menu #arriba {
+    display: flex;
+    flex-direction: column;
+  }
+  #menu #abajo {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+  }
+  #menu a {
+    margin-bottom: 10%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

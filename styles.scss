@@ -20,8 +20,8 @@ body {
   background-color: $fondo-menu;
   @include menuSticky;
   img {
-    width: 35%;
-    height: 35%;
+    width: 40%;
+    height: 40%;
     border-radius: 50%;
     padding: 5%;
   }
@@ -43,8 +43,12 @@ body {
     padding: 3%;
   }
   a {
+    color: $negro;
     outline: none;
     text-decoration: none;
+  }
+  a:hover {
+    color: $blue;
   }
 }
 
@@ -66,6 +70,9 @@ body {
     hr {
       @include separador;
     }
+    h3 {
+      text-align: center;
+    }
     ul {
       @include listas;
     }
@@ -76,9 +83,29 @@ body {
     hr {
       @include separador;
     }
+    #listaHorizontal {
+      @include horizontal;
+      align-items: normal;
+      h4 {
+        text-align: center;
+      }
+    }
     ul {
       @include listas;
+      li {
+        a {
+          color: $negro;
+          outline: none;
+          text-decoration: none;
+        }
+        a:hover {
+          color: $blue;
+        }
+      }
     }
+  }
+  div {
+    scroll-margin-top: 360px;
   }
 }
 
@@ -88,12 +115,57 @@ body {
     text-align: center;
     font-weight: bold;
   }
-
   #contactos-enlaces {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
   }
 
+  #contacto {
+    h3 {
+      text-align: center;
+    }
+    ul {
+      @include listas;
+    }
+  }
+
+  #enlace {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3 {
+      text-align: center;
+    }
+    ul {
+      @include listas;
+      img {
+        width: 40%;
+        height: 30%;
+      }
+      text-align: center  ;
+    }
+  }
+}
+
+@media (min-width: 850px) {
+  #wrapper {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas: "menu contenido";
+  }
+  #menu {
+    @include menuSticky;
+    @include vertical;
+    #arriba {
+      @include vertical;
+    }
+    #abajo {
+      @include vertical;
+      font-size: 20px;
+    }
+    a {
+      margin-bottom: 10%;
+    }
+  }
 }
