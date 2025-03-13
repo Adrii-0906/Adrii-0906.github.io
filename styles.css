@@ -8,7 +8,7 @@ body {
 #wrapper {
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-areas: "menu" "principal" "footer";
+  grid-template-areas: "menu" "principal";
 }
 
 #menu {
@@ -103,7 +103,7 @@ body {
   width: 100%;
 }
 #principal #formacion h3 {
-  text-align: center;
+  text-align: start;
 }
 #principal #formacion ul {
   list-style: none;
@@ -154,7 +154,7 @@ body {
 }
 
 #footer {
-  background-color: #278075;
+  background-color: #816430;
 }
 #footer p {
   text-align: center;
@@ -163,6 +163,9 @@ body {
 #footer #contactos-enlaces {
   display: flex;
   flex-direction: row;
+}
+#footer #contacto {
+  font-size: 20px;
 }
 #footer #contacto h3 {
   text-align: center;
@@ -189,7 +192,7 @@ body {
 }
 #footer #enlace ul img {
   width: 40%;
-  height: 30%;
+  height: 40%;
 }
 
 @media (min-width: 850px) {
@@ -215,6 +218,7 @@ body {
     flex-direction: column;
     background-color: #278075;
     border: none;
+    border-top: 3px black solid;
     font-size: 20px;
     overflow-y: auto;
   }
