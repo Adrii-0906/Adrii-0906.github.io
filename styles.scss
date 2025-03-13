@@ -52,6 +52,10 @@ body {
 }
 
 #principal {
+  #title {
+    color: $color-letra;
+    text-align: center;
+  }
   #sobreMi {
     @include divs;
     hr {
