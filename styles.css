@@ -234,6 +234,12 @@ body {
   #menu a {
     color: white;
     margin-bottom: 5%;
+    width: 100%;
+    text-align: center;
+  }
+  #menu a:hover {
+    background-color: dimgray;
+    opacity: 0.7;
   }
   #principal #footer #contacto {
     font-size: 20px;

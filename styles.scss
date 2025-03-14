@@ -1,29 +1,33 @@
 @use "sass:list";
+
+/// Ponemos el @use para poder usar las variables creadas en el otro archivo
 @use "variables" as *;
+
+/// Usamos los mixins de otro archivo para ayudarnos hacer el archivo principal
 @use "mixins" as *;
 
+/// Configuiracion del body
 body {
   @include bodyStyle;
   background-color: $fondo-principal;
 }
 
+/// Configuramos el div principal donde va ir todo
 #wrapper {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-areas: "menu"
-                       "principal";
+  @include wrapper;
 }
 
-
+/// Creamos el menu de la pagina con ayuda de los mixins
 #menu {
+
+  /// Ponemos  el fondo el menu superior y anadimos el Sticky
   background-color: $fondo-menu;
   @include menuSticky;
   img {
-    width: 40%;
-    height: 40%;
-    border-radius: 50%;
-    padding: 5%;
+    @include imagen;
   }
+
+  /// En la parte superior del menu utilizamos el mixin horizontal y usamos la variable del color de letra
   #arriba {
     @include horizontal;
     color: $color-letra;
@@ -33,6 +37,7 @@ body {
     flex-direction: column;
     text-align: center;
   }
+  /// En la parte de abajo configuramos el menu horizontal con los mixin y anadimos un par de cosillas mas
   #abajo {
     border-top: 3px $negro solid;
     border-bottom: 3px $negro solid;
@@ -41,6 +46,7 @@ body {
     background-color: $color-fondo-menu;
     padding: 3%;
   }
+  /// Configuramos los enlaces ponimendoles estilos
   a {
     color: $negro;
     outline: none;
@@ -51,6 +57,7 @@ body {
   }
 }
 
+/// En el div principal creamos todos los divs con ayuda del mixin para no tener tango codigo repetitivo
 #principal {
   #title {
     color: $color-letra;
@@ -107,9 +114,14 @@ body {
       }
     }
   }
+
+  /// Hacemos que al ir a una parte de la pagina no tape parte de lo que queremos el menu
   div {
     scroll-margin-top: 360px;
   }
+
+  /// Creamos el footer utilizando mixins y variables como en la parte superior
+  /// Creamos dos partes. Una para configurar como contactarme y otra para anadir enlaces en el footer con imagenes.
   #footer {
     background-color: $fondo-footer;
     p {
@@ -132,10 +144,7 @@ body {
     }
 
     #enlace {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      @include enlaces;
       h3 {
         text-align: center;
       }
@@ -151,22 +160,19 @@ body {
   }
 }
 
-
+/// Aqui tenemos el media a 850px para tener un diseno responsivo para tablet y ordenador
 @media (min-width: 850px) {
+  /// Hacemos igual que con el wrapper de arriba pero ahora es para el media
   #wrapper {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    grid-template-rows: auto 1fr auto;
+    @include wrapperMedia;
   }
+  /// El menu es igual que el de arriba, pero ahora esta en la parte izqauierda y es vertical entero.
   #menu {
     @include menuSticky;
     @include vertical;
     height: 100vh;
     img {
-      width: 50%;
-      height: 50%;
-      border-radius: 50%;
-      padding: 5%;
+      @include imagenMedia;
     }
     #arriba {
       @include vertical;
@@ -182,9 +188,15 @@ body {
     a {
       color: $color-letra;
       margin-bottom: 5%;
+      width: 100%;
+      text-align: center;
+    }
+    a:hover {
+      background-color: dimgray;
+      opacity: 0.7;
     }
   }
-
+   /// En la parte de los div solo cambiamos el tamano de la letra en el footer y el tamano de las imagenes
   #principal {
     #footer {
       #contacto {
